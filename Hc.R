@@ -13,10 +13,6 @@ clusters_hc_pca <- cutree(hc_pca, k = 3)
 
 
 # Visualize the clusters on the PCA space
-fviz_cluster(list(data = pca_data, cluster = clusters_hc_pca),
-             geom = "point", ellipse.type = "convex",
-             main = "Clusters (PCA Data)")
-
 plot_ly(pca_data_frame_hc, 
         x = ~Dim.1, y = ~Dim.2, z = ~Dim.3, 
         color = ~Cluster, colors = "Set1",

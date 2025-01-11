@@ -12,3 +12,6 @@ Datamining1.r -> data prepocess, EDA and kmeans model including visualization
 GMM.r -> gmm model and visualization
 
 HC.r -> HC model and visualization
+
+kmeans.html | hc.html | gmm.html -> 3d Clustering Result
+

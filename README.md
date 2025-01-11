@@ -8,5 +8,7 @@ the purpose is for preprocess the data and then cluster them by customer segemnt
 the cluster method used is kmeans - Gaussian Mixture Model (GMM) - Hierarchical Clustering (HC) then we analyze based on cluster result 
 
 Datamining1.r -> data prepocess, EDA and kmeans model including visualization
+
 GMM.r -> gmm model and visualization
+
 HC.r -> HC model and visualization

@@ -336,37 +336,6 @@ print(Spending_outlier) #-1419.25  2554.75  |  0 (No Outlier)
 
 colnames(merged_data_clean)
 
-#mnt wines
-mntWines_outlier <- apply(as.matrix(merged_data_clean$MntWines), 2, count_outliers_iqr)
-print(mntWines_outlier) #-728  1280 | 20
-
-merged_data_clean <- merged_data_clean[merged_data_clean$MntWines >= -728 & merged_data_clean$MntWines <= 1280, ]
-
-#mnt fruit
-mntFruit_outlier <- apply(as.matrix(merged_data_clean$MntFruits), 2, count_outliers_iqr)
-print(mntFruit_outlier) #-44.5  79 | 184
-
-merged_data_clean$MntFruits[merged_data_clean$MntFruits < -44.5 | 
-                                    merged_data_clean$MntFruits > 79] <- median(merged_data_clean$MntFruits, na.rm = TRUE)
-
-#mnt meat
-mntMeat_outlier <- apply(as.matrix(merged_data_clean$MntMeatProducts), 2, count_outliers_iqr)
-print(mntMeat_outlier) # -314.75  567.25 | 127
-
-#mnt fish 
-mntFish_outlier <- apply(as.matrix(merged_data_clean$MntFishProducts), 2, count_outliers_iqr)
-print(mntFish_outlier) # -69  123 | 164
-
-#mnt sweet
-mntSweet_outlier <- apply(as.matrix(merged_data_clean$MntSweetProducts), 2, count_outliers_iqr)
-print(mntSweet_outlier) # -48.5 83.5 | 177
-
-#mnt gold
-mntGold_outlier<- apply(as.matrix(merged_data_clean$MntGoldProds), 2, count_outliers_iqr)
-print(mntGold_outlier) #-63 129 | 152 
-
-
-
 
 write.csv(merged_data_clean, "Data Merged Clean.csv", row.names = FALSE)
 

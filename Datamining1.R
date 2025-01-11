@@ -1,6 +1,3 @@
-# install.packages("dplyr")
-# install.packages("ggplot2")
-# install.packages("gridExtra")
 library(dplyr)
 library(cluster)
 library(clusterSim)
